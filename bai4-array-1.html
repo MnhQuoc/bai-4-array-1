@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [];
+    let number = +prompt("Nhập số lượng phần tử của mảng")
+    let trungGian;
+    for (let i = 0; i < number; i++) {
+        arr[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " của mảng")
+    }
+    alert("Mảng hiện có là: " + arr)
+    for (let j = 0; j < number/2; j++) {
+        trungGian = arr[j];
+        arr[j]=arr[number-(j+1)];
+        arr[number-(j+1)]=trungGian;
+    }
+    alert("Mảng sau khi đảo ngược là: " + arr);
+</script>
+</html>
